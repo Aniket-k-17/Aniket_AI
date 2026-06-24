@@ -29,12 +29,38 @@ export function Contact() {
     }
 
     setSubmitting(true);
-    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:Aniketkondhalkar4717@gmail.com?subject=${subject}&body=${body}`;
-    toast.success("Opening your email client…");
-    setTimeout(() => setSubmitting(false), 800);
-    form.reset();
+    fetch("https://formsubmit.co/ajax/Aniketkondhalkar4717@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+        _subject: `New portfolio contact message from ${name}`
+      })
+    })
+      .then((res) => {
+        if (res.ok) {
+          toast.success("Message sent successfully! (First-time users: click the confirmation email link from FormSubmit to activate your inbox).");
+          form.reset();
+        } else {
+          throw new Error("FormSubmit response not OK");
+        }
+      })
+      .catch((err) => {
+        console.error("FormSubmit error:", err);
+        toast.error("Network issue. Opening your email client instead...");
+        // Fallback to mailto
+        const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+        const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+        window.location.href = `mailto:Aniketkondhalkar4717@gmail.com?subject=${subject}&body=${body}`;
+      })
+      .finally(() => {
+        setSubmitting(false);
+      });
   };
 
   const channels = [
@@ -68,7 +94,13 @@ export function Contact() {
               </div>
             );
             return c.href ? (
-              <a key={c.label} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="rounded-xl p-2 transition-colors hover:bg-muted">
+              <a
+                key={c.label}
+                href={c.href}
+                target={c.href.startsWith("http") ? "_blank" : undefined}
+                rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="rounded-xl p-2 transition-colors hover:bg-muted"
+              >
                 {Inner}
               </a>
             ) : (

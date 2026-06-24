@@ -39,11 +39,11 @@ function answer(input: string): { text: string; suggestions?: string[] } {
 
   if (/insight|analytics|streamlit/.test(q))
     return {
-      text: "InsightAI is an AI-powered analytics platform: upload a dataset and get automated EDA, visualizations, predictive analytics, and business-ready insights. Built with Python, Streamlit, Pandas, and Scikit-Learn. Live: insightgen-ai-by-aniket.streamlit.app",
+      text: "InsightAI is an AI-powered analytics platform: upload a dataset and get automated EDA, visualizations, predictive analytics, and business-ready insights. Built with Python, Streamlit, Pandas, and Scikit-Learn. Live: <a href=\"https://insightgen-ai-by-aniket.streamlit.app/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">insightgen-ai-by-aniket.streamlit.app</a>",
     };
 
   if (/cinematch|movie|recommend/.test(q))
-    return { text: "CineMatch is a content-based movie recommendation system using similarity techniques in Scikit-Learn, deployed on HuggingFace Spaces." };
+    return { text: "CineMatch is a content-based movie recommendation system using similarity techniques in Scikit-Learn, deployed on HuggingFace Spaces. Live: <a href=\"https://huggingface.co/spaces/aniket17k/Cinematch\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">HuggingFace Spaces</a>" };
 
   if (/dashboard|power ?bi|bi|kpi/.test(q))
     return {
@@ -51,7 +51,7 @@ function answer(input: string): { text: string; suggestions?: string[] } {
     };
 
   if (/deploy|live|hosted/.test(q))
-    return { text: "3 deployed apps: InsightAI (Streamlit), Retail Marketing Dashboard (Streamlit), and CineMatch (HuggingFace Spaces). All publicly accessible." };
+    return { text: "3 deployed apps: <a href=\"https://insightgen-ai-by-aniket.streamlit.app/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">InsightAI</a> (Streamlit), <a href=\"https://retail-marketing-analytics-dashboard-by-aniket.streamlit.app/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">Retail Marketing Dashboard</a> (Streamlit), and <a href=\"https://huggingface.co/spaces/aniket17k/Cinematch\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">CineMatch</a> (HuggingFace Spaces). All publicly accessible." };
 
   if (/skill|tech|stack|language|tool/.test(q))
     return {
@@ -71,7 +71,7 @@ function answer(input: string): { text: string; suggestions?: string[] } {
 
   if (/contact|email|phone|reach|hire/.test(q))
     return {
-      text: "📧 Aniketkondhalkar4717@gmail.com  ·  📱 +91 9322813103  ·  LinkedIn: aniket-kondhalkar-174a0a258  ·  GitHub: Aniket-k-17",
+      text: "📧 <a href=\"mailto:Aniketkondhalkar4717@gmail.com\" class=\"underline text-primary hover:text-violet transition-colors\">Aniketkondhalkar4717@gmail.com</a>  ·  📱 <a href=\"tel:+919322813103\" class=\"underline text-primary hover:text-violet transition-colors\">+91 9322813103</a>  ·  LinkedIn: <a href=\"https://www.linkedin.com/in/aniket-kondhalkar-174a0a258/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">aniket-kondhalkar-174a0a258</a>  ·  GitHub: <a href=\"https://github.com/Aniket-k-17\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">Aniket-k-17</a>",
       suggestions: ["Open contact form"],
     };
 
@@ -166,9 +166,11 @@ export function Chatbot() {
                           ? "rounded-br-sm bg-gradient-to-br from-primary to-violet text-primary-foreground"
                           : "rounded-bl-sm bg-muted text-foreground"
                       }`}
-                    >
-                      {m.text}
-                    </div>
+                      {...(m.role === "bot"
+                        ? { dangerouslySetInnerHTML: { __html: m.text } }
+                        : { children: m.text }
+                      )}
+                    />
                     {m.suggestions && (
                       <div className="flex flex-wrap gap-1.5">
                         {m.suggestions.map((s) => (

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Download, Mail, Github, Linkedin, MapPin, ArrowDown } from "lucide-react";
-import portrait from "@/assets/aniket-photo.webp.asset.json";
+import portraitImg from "@/assets/aniket-portrait.jpg";
+import resumeUrl from "@/assets/Aniket_Kondhalkar_Resume.pdf";
 import { ParticleBackground } from "./ParticleBackground";
 
 export function Hero() {
@@ -46,10 +47,8 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
-              href="/Aniket_Kondhalkar_Resume.pdf"
+              href={resumeUrl}
               download="Aniket_Kondhalkar_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary via-primary to-violet px-5 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
             >
               <Download className="h-4 w-4" /> Download Resume
@@ -87,12 +86,12 @@ export function Hero() {
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary/40 via-cyan/30 to-violet/40 blur-2xl" aria-hidden />
             <div className="relative animate-float overflow-hidden rounded-[2rem] glass p-2 shadow-glow">
               <img
-                src={portrait.url}
+                src={portraitImg}
                 alt="Aniket Shantaram Kondhalkar — AI / ML Engineer"
                 width={720}
                 height={960}
                 loading="eager"
-                className="h-[420px] w-[320px] rounded-[1.5rem] object-cover sm:h-[480px] sm:w-[360px]"
+                className="h-[420px] w-full max-w-[320px] rounded-[1.5rem] object-cover sm:h-[480px] sm:w-[360px]"
               />
             </div>
             <div className="absolute -bottom-4 -left-4 glass rounded-xl px-3 py-2 text-xs font-mono shadow-card">
