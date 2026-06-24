@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Download, Mail, Github, Linkedin, MapPin, ArrowDown } from "lucide-react";
 import portraitImg from "@/assets/aniket-portrait.jpg";
-import resumeUrl from "@/assets/Aniket_Kondhalkar_Resume.pdf";
 import { ParticleBackground } from "./ParticleBackground";
 
 export function Hero() {
@@ -47,7 +46,7 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
-              href={resumeUrl}
+              href="/Aniket_Kondhalkar_Resume.pdf"
               download="Aniket_Kondhalkar_Resume.pdf"
               className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary via-primary to-violet px-5 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
             >
