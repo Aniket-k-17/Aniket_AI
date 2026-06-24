@@ -3,9 +3,9 @@ import { Section } from "./Section";
 import { Brain, ChartLine, Cpu, Sparkles } from "lucide-react";
 
 const stats = [
-  { icon: Brain, label: "AI / ML Projects", value: "10+" },
-  { icon: ChartLine, label: "Dashboards Built", value: "5+" },
-  { icon: Cpu, label: "Models Deployed", value: "8+" },
+  { icon: Brain, label: "AI / ML Projects", value: "4" },
+  { icon: ChartLine, label: "Dashboards Built", value: "4" },
+  { icon: Cpu, label: "Apps Deployed", value: "3" },
   { icon: Sparkles, label: "Certifications", value: "7" },
 ];
 
