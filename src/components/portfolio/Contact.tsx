@@ -68,7 +68,7 @@ export function Contact() {
               </div>
             );
             return c.href ? (
-              <a key={c.label} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="rounded-xl p-2 transition-colors hover:bg-muted">
+              <a key={c.label} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="rounded-xl p-2 transition-colors hover:bg-muted">
                 {Inner}
               </a>
             ) : (

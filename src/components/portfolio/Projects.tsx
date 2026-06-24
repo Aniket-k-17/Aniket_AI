@@ -128,7 +128,7 @@ export function Projects() {
                     <a
                       href={p.github}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card/50 px-3 py-2 text-xs font-semibold transition-colors hover:bg-muted"
                     >
                       <Github className="h-3.5 w-3.5" /> GitHub
@@ -138,7 +138,7 @@ export function Projects() {
                     <a
                       href={p.demo}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-primary to-violet px-3 py-2 text-xs font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
                     >
                       <ExternalLink className="h-3.5 w-3.5" /> Live Demo
