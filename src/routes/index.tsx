@@ -10,6 +10,7 @@ import { Education } from "@/components/portfolio/Education";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { BackToTop } from "@/components/portfolio/BackToTop";
+import { Chatbot } from "@/components/portfolio/Chatbot";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,6 +40,7 @@ function Index() {
       <Contact />
       <Footer />
       <BackToTop />
+      <Chatbot />
     </main>
   );
 }
