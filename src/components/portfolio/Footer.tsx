@@ -27,10 +27,10 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold">Connect</h4>
           <div className="mt-3 flex gap-2">
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/aniket-kondhalkar-174a0a258/" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-lg border border-border hover:bg-muted">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/aniket-kondhalkar-174a0a258/" target="_blank" rel="noopener noreferrer" className="grid h-9 w-9 place-items-center rounded-lg border border-border hover:bg-muted">
               <Linkedin className="h-4 w-4" />
             </a>
-            <a aria-label="GitHub" href="https://github.com/Aniket-k-17" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-lg border border-border hover:bg-muted">
+            <a aria-label="GitHub" href="https://github.com/Aniket-k-17" target="_blank" rel="noopener noreferrer" className="grid h-9 w-9 place-items-center rounded-lg border border-border hover:bg-muted">
               <Github className="h-4 w-4" />
             </a>
             <a aria-label="Email" href="mailto:Aniketkondhalkar4717@gmail.com" className="grid h-9 w-9 place-items-center rounded-lg border border-border hover:bg-muted">

@@ -47,7 +47,9 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="/Aniket_Kondhalkar_Resume.pdf"
-              download
+              download="Aniket_Kondhalkar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary via-primary to-violet px-5 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
             >
               <Download className="h-4 w-4" /> Download Resume
@@ -59,11 +61,11 @@ export function Hero() {
               <Mail className="h-4 w-4" /> Contact Me
             </a>
             <div className="flex items-center gap-2 pl-1">
-              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/aniket-kondhalkar-174a0a258/" target="_blank" rel="noreferrer"
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/aniket-kondhalkar-174a0a258/" target="_blank" rel="noopener noreferrer"
                 className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-card/40 backdrop-blur transition-colors hover:bg-muted">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a aria-label="GitHub" href="https://github.com/Aniket-k-17" target="_blank" rel="noreferrer"
+              <a aria-label="GitHub" href="https://github.com/Aniket-k-17" target="_blank" rel="noopener noreferrer"
                 className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-card/40 backdrop-blur transition-colors hover:bg-muted">
                 <Github className="h-4 w-4" />
               </a>
