@@ -60,26 +60,38 @@ const projects = [
     github: "https://github.com/Aniket-k-17/retail-marketing-analytics-dashboard",
     demo: "https://retail-marketing-analytics-dashboard-by-aniket.streamlit.app/",
     renderVisual: () => (
-      <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[10px] select-none">
-        <div className="flex items-center justify-between border-b border-border/40 pb-2">
-          <span className="text-muted-foreground">kpi_metrics_dashboard</span>
-          <span className="rounded bg-amber-500/10 px-1.5 py-0.5 text-amber-400 font-bold">ACTIVE</span>
+      <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[9.5px] select-none">
+        <div className="flex items-center justify-between border-b border-border/40 pb-2 mb-2.5">
+          <span className="text-muted-foreground font-semibold">Power BI Executive Overview</span>
+          <span className="rounded bg-emerald-500/10 px-1.5 py-0.5 text-emerald-400 font-bold">16.01M Revenue</span>
         </div>
-        <div className="mt-2.5 grid grid-cols-3 gap-2">
-          <div className="rounded border border-border bg-card/40 p-2 text-center">
-            <span className="text-muted-foreground text-[7.5px] uppercase">Sales</span>
-            <div className="font-bold text-foreground text-[10.5px] mt-0.5">$1.2M</div>
-            <span className="text-emerald-400 text-[8px] font-semibold">+14.2%</span>
+        <div className="grid grid-cols-4 gap-1.5 mb-2.5">
+          <div className="rounded border border-border/50 bg-card/30 p-1.5 text-center">
+            <span className="text-muted-foreground text-[7.5px] uppercase leading-none block">Revenue</span>
+            <div className="font-bold text-foreground text-[10px] mt-0.5">16.01M</div>
           </div>
-          <div className="rounded border border-border bg-card/40 p-2 text-center">
-            <span className="text-muted-foreground text-[7.5px] uppercase">CAC</span>
-            <div className="font-bold text-foreground text-[10.5px] mt-0.5">$42.50</div>
-            <span className="text-rose-400 text-[8px] font-semibold">-8.3%</span>
+          <div className="rounded border border-border/50 bg-card/30 p-1.5 text-center">
+            <span className="text-muted-foreground text-[7.5px] uppercase leading-none block">Orders</span>
+            <div className="font-bold text-foreground text-[10px] mt-0.5">99K</div>
           </div>
-          <div className="rounded border border-border bg-card/40 p-2 text-center">
-            <span className="text-muted-foreground text-[7.5px] uppercase">ROI</span>
-            <div className="font-bold text-foreground text-[10.5px] mt-0.5">3.8x</div>
-            <span className="text-emerald-400 text-[8px] font-semibold">+18.5%</span>
+          <div className="rounded border border-border/50 bg-card/30 p-1.5 text-center">
+            <span className="text-muted-foreground text-[7.5px] uppercase leading-none block">Customers</span>
+            <div className="font-bold text-foreground text-[10px] mt-0.5">96K</div>
+          </div>
+          <div className="rounded border border-border/50 bg-card/30 p-1.5 text-center">
+            <span className="text-muted-foreground text-[7.5px] uppercase leading-none block">Top State</span>
+            <div className="font-bold text-emerald-400 text-[10px] mt-0.5">SP</div>
+          </div>
+        </div>
+        <div className="rounded border border-border/45 bg-card/25 p-2 text-[8px] text-muted-foreground leading-relaxed">
+          <div className="font-semibold text-foreground/90 border-b border-border/30 pb-0.5 mb-1">Customer Segments</div>
+          <div className="flex justify-between">
+            <span>VIP (52k Customers)</span>
+            <span className="text-emerald-400 font-bold">High Revenue Contribution</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Loyal (39k Customers)</span>
+            <span className="text-cyan font-bold">Stable Repeat Purchases</span>
           </div>
         </div>
       </div>
@@ -144,12 +156,12 @@ const projects = [
       <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[10px] select-none">
         <div className="flex items-center justify-between border-b border-border/40 pb-2">
           <span className="text-muted-foreground">live_camera_feed_01</span>
-          <span className="rounded bg-rose-500/10 px-1.5 py-0.5 text-rose-400 font-bold animate-pulse">REC</span>
+          <span className="rounded bg-emerald-500/10 px-1.5 py-0.5 text-emerald-400 font-bold animate-pulse">ACTIVE</span>
         </div>
         <div className="relative mt-2 h-14 rounded bg-black/60 border border-border/30 flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:10px_10px]" />
-          <div className="absolute left-1/4 top-1/6 w-28 h-8 border border-rose-500 bg-rose-500/10 rounded flex flex-col justify-center px-1">
-            <span className="text-[6.5px] text-rose-400 font-bold bg-black/50 px-1 py-0.2 rounded w-fit leading-none">person: 96.4%</span>
+          <div className="absolute left-1/4 top-1/6 w-28 h-8 border border-emerald-500 bg-emerald-500/10 rounded flex flex-col justify-center px-1">
+            <span className="text-[6.5px] text-emerald-400 font-bold bg-black/50 px-1 py-0.2 rounded w-fit leading-none">person: 96.4%</span>
           </div>
           <div className="absolute right-4 bottom-1 text-[6.5px] text-muted-foreground/60">FPS: 30.2</div>
         </div>
