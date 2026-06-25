@@ -21,15 +21,13 @@ export function About() {
           className="glass rounded-2xl p-8 shadow-card"
         >
           <p className="text-base leading-relaxed text-foreground/90 sm:text-lg">
-            Aniket is an aspiring <span className="font-semibold text-foreground">AI Engineer and Data Analyst</span> with hands-on
-            experience in Machine Learning, Deep Learning, Generative AI, Data Analytics, and Business Intelligence. He has built
-            real-world projects involving AI-powered analytics, recommendation systems, computer vision, and interactive business
-            dashboards.
+            I am an AI Engineer and Data Analyst passionate about building intelligent systems that transform data into meaningful insights and real-world solutions. My experience spans Machine Learning, Deep Learning, Generative AI, Data Analytics, and Business Intelligence through hands-on projects and practical implementations.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Through practical implementation of predictive analytics, machine learning models, and data visualization tools,
-            he focuses on solving real-world problems using data-driven approaches. Currently pursuing opportunities to contribute
-            to innovative AI and analytics solutions while continuously expanding technical expertise.
+            I have developed AI-powered analytics platforms, recommendation systems, computer vision applications, and interactive business dashboards using modern tools and technologies. I enjoy solving complex problems with data-driven approaches and continuously exploring new advancements in AI and machine learning.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            Currently, I am seeking opportunities where I can apply my skills, contribute to impactful projects, and grow as an AI and Machine Learning professional.
           </p>
         </motion.div>
 
