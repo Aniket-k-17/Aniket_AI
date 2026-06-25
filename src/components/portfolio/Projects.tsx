@@ -5,39 +5,41 @@ import { Github, ExternalLink, Sparkles, BarChart3, Film, Eye } from "lucide-rea
 const projects = [
   {
     icon: Sparkles,
-    title: "InsightAI – AI-Powered Data Analytics Platform",
+    title: "InsightGen AI – Automated Analytics & ML Platform",
     description:
-      "AI platform that automates dataset analysis, visualization, exploratory analysis, and predictive analytics. Upload a dataset and get ML-driven business insights end-to-end through a scalable Streamlit interface.",
-    tech: ["Python", "Streamlit", "Pandas", "NumPy", "Scikit-Learn"],
+      "End-to-end data platform that automates file cleaning, exploratory dashboard generation, anomaly detection, regression/classification training, and LLM-powered natural language queries.",
+    tech: ["Python", "Streamlit", "Scikit-Learn", "Plotly", "Groq (Llama 3)"],
     features: [
-      "Automated dataset analysis",
-      "Intelligent insight generation",
-      "Predictive analytics workflows",
-      "Interactive dashboards",
+      "Automated cleaning (CSV, Excel, JSON)",
+      "Heatmaps, correlations & auto-charts",
+      "Anomaly detection & ML training models",
+      "Groq Llama 3 natural language data chat",
     ],
     github: "https://github.com/Aniket-k-17/InsightGen-AI",
     demo: "https://insightgen-ai-by-aniket.streamlit.app/",
     badge: "Flagship",
     renderVisual: () => (
-      <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[10px] select-none">
-        <div className="flex items-center justify-between border-b border-border/40 pb-2">
-          <span className="text-muted-foreground">dataset_explorer.py</span>
-          <span className="rounded bg-emerald-500/10 px-1.5 py-0.5 text-emerald-400 font-bold">READY</span>
+      <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[9.5px] select-none">
+        <div className="flex items-center justify-between border-b border-border/40 pb-2 mb-2.5">
+          <span className="text-muted-foreground font-semibold">InsightGen AI Dashboard</span>
+          <span className="rounded bg-primary/10 px-1.5 py-0.5 text-primary font-bold">Llama 3 + Groq</span>
         </div>
-        <div className="mt-2 space-y-1.5 text-muted-foreground">
-          <div><span className="text-primary font-bold">&gt;&gt;&gt;</span> df.describe()</div>
-          <div className="grid grid-cols-4 gap-1 text-[8.5px] text-foreground/80">
-            <span>rows: 15.2k</span>
-            <span>columns: 12</span>
-            <span>nulls: 0%</span>
-            <span>acc: 94.6%</span>
+        <div className="grid grid-cols-2 gap-2">
+          <div className="rounded border border-border/50 bg-card/30 p-2 flex flex-col justify-between">
+            <span className="text-foreground/90 font-bold flex items-center gap-1">📂 Upload & Clean</span>
+            <span className="text-[8px] text-muted-foreground mt-0.5">CSV/Excel file clean-up</span>
           </div>
-          <div className="flex items-end gap-1 pt-2 h-10">
-            <span className="h-5 w-full rounded bg-primary/20" />
-            <span className="h-7 w-full rounded bg-cyan/20" />
-            <span className="h-9 w-full rounded bg-violet/20" />
-            <span className="h-4 w-full rounded bg-primary/30" />
-            <span className="h-6 w-full rounded bg-cyan/30" />
+          <div className="rounded border border-border/50 bg-card/30 p-2 flex flex-col justify-between">
+            <span className="text-foreground/90 font-bold flex items-center gap-1">📊 Auto Dashboard</span>
+            <span className="text-[8px] text-muted-foreground mt-0.5">Correlation heatmaps & Plotly</span>
+          </div>
+          <div className="rounded border border-border/50 bg-card/30 p-2 flex flex-col justify-between">
+            <span className="text-foreground/90 font-bold flex items-center gap-1">🧠 ML Prediction</span>
+            <span className="text-[8px] text-muted-foreground mt-0.5">Regression & classification</span>
+          </div>
+          <div className="rounded border border-border/50 bg-card/30 p-2 flex flex-col justify-between">
+            <span className="text-foreground/90 font-bold flex items-center gap-1">💬 Llama 3 AI Chat</span>
+            <span className="text-[8px] text-muted-foreground mt-0.5">Natural language data Q&A</span>
           </div>
         </div>
       </div>
