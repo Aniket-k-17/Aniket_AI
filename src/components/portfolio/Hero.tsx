@@ -153,12 +153,7 @@ export function Hero() {
               Gen AI
             </motion.div>
 
-            <div className="absolute -bottom-4 -left-4 glass rounded-xl px-3 py-2 text-xs font-mono shadow-card">
-              <span className="text-gradient font-bold">model.train()</span> →  AI/ML
-            </div>
-            <div className="absolute -top-4 -right-4 glass rounded-xl px-3 py-2 text-xs font-mono shadow-card">
-              accuracy: <span className="text-gradient font-bold">98.2%</span>
-            </div>
+
           </div>
         </motion.div>
       </div>
