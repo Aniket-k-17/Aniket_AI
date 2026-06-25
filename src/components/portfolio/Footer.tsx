@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { toast } from "sonner";
 
 export function Footer() {
   return (
@@ -33,7 +34,15 @@ export function Footer() {
             <a aria-label="GitHub" href="https://github.com/Aniket-k-17" target="_blank" rel="noopener noreferrer" className="grid h-9 w-9 place-items-center rounded-lg border border-border hover:bg-muted">
               <Github className="h-4 w-4" />
             </a>
-            <a aria-label="Email" href="mailto:Aniketkondhalkar4717@gmail.com" className="grid h-9 w-9 place-items-center rounded-lg border border-border hover:bg-muted">
+            <a
+              aria-label="Email"
+              href="mailto:Aniketkondhalkar4717@gmail.com"
+              onClick={() => {
+                navigator.clipboard.writeText("Aniketkondhalkar4717@gmail.com");
+                toast.success("Email copied to clipboard!");
+              }}
+              className="grid h-9 w-9 place-items-center rounded-lg border border-border hover:bg-muted"
+            >
               <Mail className="h-4 w-4" />
             </a>
           </div>

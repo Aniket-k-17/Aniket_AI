@@ -33,7 +33,7 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
-            Open to AI / ML / Data Science roles
+            Open to AI / ML / Data Science / Analyst roles
           </div>
 
           <h1 className="text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
@@ -120,23 +120,33 @@ export function Hero() {
             </motion.div>
 
             <motion.div
-              custom={{ yStart: -6, yEnd: 8, duration: 6 }}
-              variants={floatingBadgeVariants}
-              animate="animate"
-              className="hidden md:flex items-center gap-1.5 absolute -right-16 top-24 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-cyan/20 backdrop-blur"
-            >
-              <span className="h-2 w-2 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e]" />
-              YOLOv8
-            </motion.div>
-
-            <motion.div
               custom={{ yStart: 6, yEnd: -8, duration: 5.5 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="hidden md:flex items-center gap-1.5 absolute -right-20 bottom-1/4 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-violet/20 backdrop-blur"
+              className="hidden md:flex items-center gap-1.5 absolute -left-20 bottom-1/4 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-violet/20 backdrop-blur"
             >
               <span className="h-2 w-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
               Power BI
+            </motion.div>
+
+            <motion.div
+              custom={{ yStart: -6, yEnd: 8, duration: 6 }}
+              variants={floatingBadgeVariants}
+              animate="animate"
+              className="hidden md:flex items-center gap-1.5 absolute -right-24 top-24 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-cyan/20 backdrop-blur"
+            >
+              <span className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]" />
+              Machine Learning
+            </motion.div>
+
+            <motion.div
+              custom={{ yStart: -4, yEnd: 8, duration: 4.8 }}
+              variants={floatingBadgeVariants}
+              animate="animate"
+              className="hidden md:flex items-center gap-1.5 absolute -right-16 bottom-1/4 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-primary/20 backdrop-blur"
+            >
+              <span className="h-2 w-2 rounded-full bg-violet-500 shadow-[0_0_8px_#8b5cf6]" />
+              Gen AI
             </motion.div>
 
             <div className="absolute -bottom-4 -left-4 glass rounded-xl px-3 py-2 text-xs font-mono shadow-card">

@@ -93,10 +93,15 @@ export function Contact() {
                 </div>
               </div>
             );
+            const isEmail = c.label === "Email";
             return c.href ? (
               <a
                 key={c.label}
                 href={c.href}
+                onClick={isEmail ? (e) => {
+                  navigator.clipboard.writeText(c.value);
+                  toast.success("Email copied to clipboard!");
+                } : undefined}
                 target={c.href.startsWith("http") ? "_blank" : undefined}
                 rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="rounded-xl p-2 transition-colors hover:bg-muted"
