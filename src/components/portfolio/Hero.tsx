@@ -96,18 +96,20 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="order-1 flex justify-center lg:order-2"
         >
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-[1.7rem] bg-gradient-to-br from-primary/30 via-cyan/20 to-violet/30 blur-2xl" aria-hidden />
+          <div className="relative group">
+            {/* Elegant soft shadow glow */}
+            <div className="absolute -inset-1.5 rounded-[1.8rem] bg-gradient-to-tr from-primary/20 to-cyan/10 opacity-70 blur-xl group-hover:opacity-100 transition-opacity duration-500" aria-hidden />
             
-            <div className="relative animate-float rounded-[1.7rem] p-[3px] bg-gradient-to-br from-primary/80 via-cyan/60 to-violet/80 shadow-glow">
-              <div className="overflow-hidden rounded-[1.6rem] bg-background/90 p-1.5 backdrop-blur-3xl">
+            {/* Clean, professional executive border container */}
+            <div className="relative rounded-[1.8rem] border border-border/80 bg-card p-2 shadow-2xl transition-all duration-300 group-hover:border-primary/30">
+              <div className="overflow-hidden rounded-[1.4rem] bg-muted/20">
                 <img
                   src={portraitImg}
                   alt="Aniket Shantaram Kondhalkar — AI / ML Engineer"
                   width={720}
                   height={960}
                   loading="eager"
-                  className="h-[340px] w-full max-w-[260px] rounded-[1.25rem] object-cover sm:h-[390px] sm:w-[290px]"
+                  className="h-[340px] w-full max-w-[260px] rounded-[1.4rem] object-cover sm:h-[390px] sm:w-[290px] transition-transform duration-500 group-hover:scale-[1.02]"
                 />
               </div>
             </div>
@@ -117,9 +119,9 @@ export function Hero() {
               custom={{ yStart: 0, yEnd: -12, duration: 5 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="flex items-center gap-1 absolute -left-4 sm:-left-12 top-1/4 glass rounded-xl px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-semibold shadow-card border border-primary/20 backdrop-blur"
+              className="flex items-center gap-1.5 absolute -left-4 sm:-left-12 top-1/4 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-md border border-border/60 backdrop-blur"
             >
-              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]" />
+              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-blue-500" />
               Python
             </motion.div>
 
@@ -127,9 +129,9 @@ export function Hero() {
               custom={{ yStart: 6, yEnd: -8, duration: 5.5 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="flex items-center gap-1 absolute -left-6 sm:-left-16 bottom-1/4 glass rounded-xl px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-semibold shadow-card border border-violet/20 backdrop-blur"
+              className="flex items-center gap-1.5 absolute -left-6 sm:-left-16 bottom-1/4 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-md border border-border/60 backdrop-blur"
             >
-              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
+              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-amber-500" />
               Power BI
             </motion.div>
 
@@ -137,9 +139,9 @@ export function Hero() {
               custom={{ yStart: -6, yEnd: 8, duration: 6 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="flex items-center gap-1 absolute -right-6 sm:-right-16 top-20 glass rounded-xl px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-semibold shadow-card border border-cyan/20 backdrop-blur"
+              className="flex items-center gap-1.5 absolute -right-6 sm:-right-16 top-20 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-md border border-border/60 backdrop-blur"
             >
-              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]" />
+              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-500" />
               Machine Learning
             </motion.div>
 
@@ -147,9 +149,9 @@ export function Hero() {
               custom={{ yStart: -4, yEnd: 8, duration: 4.8 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="flex items-center gap-1 absolute -right-4 sm:-right-12 bottom-1/4 glass rounded-xl px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-semibold shadow-card border border-primary/20 backdrop-blur"
+              className="flex items-center gap-1.5 absolute -right-4 sm:-right-12 bottom-1/4 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-md border border-border/60 backdrop-blur"
             >
-              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-violet-500 shadow-[0_0_8px_#8b5cf6]" />
+              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-violet-500" />
               Gen AI
             </motion.div>
 
