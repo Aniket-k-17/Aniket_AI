@@ -3,6 +3,17 @@ import { Download, Mail, Github, Linkedin, MapPin, ArrowDown } from "lucide-reac
 import portraitImg from "@/assets/aniket-portrait.jpg";
 import { ParticleBackground } from "./ParticleBackground";
 
+const floatingBadgeVariants = {
+  animate: (custom: { yStart: number; yEnd: number; duration: number }) => ({
+    y: [custom.yStart, custom.yEnd, custom.yStart],
+    transition: {
+      duration: custom.duration,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  }),
+};
+
 export function Hero() {
   return (
     <section id="top" className="relative min-h-screen overflow-hidden pt-28 pb-16">
@@ -17,7 +28,7 @@ export function Hero() {
           transition={{ duration: 0.7 }}
           className="order-2 lg:order-1"
         >
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-3 py-1.5 text-xs font-medium backdrop-blur">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 text-xs font-semibold text-emerald-400 backdrop-blur shadow-[0_0_15px_-3px_rgba(16,185,129,0.25)]">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
@@ -83,16 +94,51 @@ export function Hero() {
         >
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary/40 via-cyan/30 to-violet/40 blur-2xl" aria-hidden />
-            <div className="relative animate-float overflow-hidden rounded-[2rem] glass p-2 shadow-glow">
-              <img
-                src={portraitImg}
-                alt="Aniket Shantaram Kondhalkar — AI / ML Engineer"
-                width={720}
-                height={960}
-                loading="eager"
-                className="h-[420px] w-full max-w-[320px] rounded-[1.5rem] object-cover sm:h-[480px] sm:w-[360px]"
-              />
+            
+            <div className="relative animate-float rounded-[2rem] p-[3px] bg-gradient-to-br from-primary via-cyan to-violet shadow-glow">
+              <div className="overflow-hidden rounded-[1.9rem] bg-background/90 p-1.5 backdrop-blur-3xl">
+                <img
+                  src={portraitImg}
+                  alt="Aniket Shantaram Kondhalkar — AI / ML Engineer"
+                  width={720}
+                  height={960}
+                  loading="eager"
+                  className="h-[420px] w-full max-w-[320px] rounded-[1.5rem] object-cover sm:h-[480px] sm:w-[360px]"
+                />
+              </div>
             </div>
+
+            {/* Absolute Floating Badges */}
+            <motion.div
+              custom={{ yStart: 0, yEnd: -12, duration: 5 }}
+              variants={floatingBadgeVariants}
+              animate="animate"
+              className="hidden md:flex items-center gap-1.5 absolute -left-16 top-1/4 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-primary/20 backdrop-blur"
+            >
+              <span className="h-2 w-2 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]" />
+              Python
+            </motion.div>
+
+            <motion.div
+              custom={{ yStart: -6, yEnd: 8, duration: 6 }}
+              variants={floatingBadgeVariants}
+              animate="animate"
+              className="hidden md:flex items-center gap-1.5 absolute -right-16 top-24 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-cyan/20 backdrop-blur"
+            >
+              <span className="h-2 w-2 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e]" />
+              YOLOv8
+            </motion.div>
+
+            <motion.div
+              custom={{ yStart: 6, yEnd: -8, duration: 5.5 }}
+              variants={floatingBadgeVariants}
+              animate="animate"
+              className="hidden md:flex items-center gap-1.5 absolute -right-20 bottom-1/4 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-violet/20 backdrop-blur"
+            >
+              <span className="h-2 w-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
+              Power BI
+            </motion.div>
+
             <div className="absolute -bottom-4 -left-4 glass rounded-xl px-3 py-2 text-xs font-mono shadow-card">
               <span className="text-gradient font-bold">model.train()</span> →  AI/ML
             </div>

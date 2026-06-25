@@ -23,7 +23,7 @@ export function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
-            className="group glass rounded-2xl p-6 shadow-card transition-transform hover:-translate-y-1"
+            className="group glass card-glow rounded-2xl p-6 shadow-card"
           >
             <div className="flex items-center gap-3">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary/20 via-cyan/20 to-violet/20 text-primary">

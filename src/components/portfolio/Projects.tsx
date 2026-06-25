@@ -83,7 +83,7 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.55, delay: (i % 2) * 0.1 }}
-            className="group relative flex flex-col overflow-hidden rounded-2xl glass p-6 shadow-card transition-all hover:-translate-y-1 hover:shadow-glow"
+            className="group relative flex flex-col overflow-hidden rounded-2xl glass card-glow p-6 shadow-card"
           >
             <div
               className="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-gradient-to-br from-primary/20 via-cyan/10 to-transparent blur-2xl"
