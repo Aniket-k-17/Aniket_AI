@@ -117,9 +117,9 @@ export function Hero() {
               custom={{ yStart: 0, yEnd: -12, duration: 5 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="hidden md:flex items-center gap-1.5 absolute -left-12 top-1/4 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-primary/20 backdrop-blur"
+              className="flex items-center gap-1 absolute -left-4 sm:-left-12 top-1/4 glass rounded-xl px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-semibold shadow-card border border-primary/20 backdrop-blur"
             >
-              <span className="h-2 w-2 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]" />
+              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]" />
               Python
             </motion.div>
 
@@ -127,9 +127,9 @@ export function Hero() {
               custom={{ yStart: 6, yEnd: -8, duration: 5.5 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="hidden md:flex items-center gap-1.5 absolute -left-16 bottom-1/4 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-violet/20 backdrop-blur"
+              className="flex items-center gap-1 absolute -left-6 sm:-left-16 bottom-1/4 glass rounded-xl px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-semibold shadow-card border border-violet/20 backdrop-blur"
             >
-              <span className="h-2 w-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
+              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-amber-500 shadow-[0_0_8px_#f59e0b]" />
               Power BI
             </motion.div>
 
@@ -137,9 +137,9 @@ export function Hero() {
               custom={{ yStart: -6, yEnd: 8, duration: 6 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="hidden md:flex items-center gap-1.5 absolute -right-16 top-20 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-cyan/20 backdrop-blur"
+              className="flex items-center gap-1 absolute -right-6 sm:-right-16 top-20 glass rounded-xl px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-semibold shadow-card border border-cyan/20 backdrop-blur"
             >
-              <span className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]" />
+              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]" />
               Machine Learning
             </motion.div>
 
@@ -147,9 +147,9 @@ export function Hero() {
               custom={{ yStart: -4, yEnd: 8, duration: 4.8 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="hidden md:flex items-center gap-1.5 absolute -right-12 bottom-1/4 glass rounded-xl px-3 py-1.5 text-xs font-semibold shadow-card border border-primary/20 backdrop-blur"
+              className="flex items-center gap-1 absolute -right-4 sm:-right-12 bottom-1/4 glass rounded-xl px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-semibold shadow-card border border-primary/20 backdrop-blur"
             >
-              <span className="h-2 w-2 rounded-full bg-violet-500 shadow-[0_0_8px_#8b5cf6]" />
+              <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-violet-500 shadow-[0_0_8px_#8b5cf6]" />
               Gen AI
             </motion.div>
 
