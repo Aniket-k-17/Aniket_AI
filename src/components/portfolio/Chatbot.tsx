@@ -22,7 +22,7 @@ function answer(input: string): { text: string; suggestions?: string[] } {
 
   if (/(who|about|introduce|yourself)/.test(q))
     return {
-      text: "Aniket Shantaram Kondhalkar is an AI / Machine Learning Engineer and Data Analyst based in Satara, Maharashtra. He builds intelligent systems across ML, Deep Learning, Generative AI, Computer Vision, and BI analytics.",
+      text: "Aniket Shantaram Kondhalkar is an AI / Machine Learning Engineer and Data Analyst based in Pune, Maharashtra. He builds intelligent systems across ML, Deep Learning, Generative AI, Computer Vision, and BI analytics.",
       suggestions: ["Projects", "Skills", "Experience"],
     };
 
@@ -69,7 +69,7 @@ function answer(input: string): { text: string; suggestions?: string[] } {
   if (/cert|certificate|credential/.test(q))
     return { text: "7 verified certifications from AI Adventures: Machine Learning, Advanced Python, Data Science, SQL, Power BI, Deep Learning, and Generative AI." };
 
-  if (/contact|email|phone|reach|hire/.test(q))
+  if (/contact|email|phone|reach|hire|linkedin|github|social/.test(q))
     return {
       text: "📧 <a href=\"mailto:Aniketkondhalkar4717@gmail.com\" class=\"underline text-primary hover:text-violet transition-colors\">Aniketkondhalkar4717@gmail.com</a>  ·  📱 <a href=\"tel:+919322813103\" class=\"underline text-primary hover:text-violet transition-colors\">+91 9322813103</a>  ·  LinkedIn: <a href=\"https://www.linkedin.com/in/aniket-kondhalkar-174a0a258/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">aniket-kondhalkar-174a0a258</a>  ·  GitHub: <a href=\"https://github.com/Aniket-k-17\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">Aniket-k-17</a>",
       suggestions: ["Open contact form"],
@@ -79,7 +79,7 @@ function answer(input: string): { text: string; suggestions?: string[] } {
     return { text: "You can download Aniket's resume from the hero section — the 'Download Resume' button at the top of the page." };
 
   if (/location|where|based|city/.test(q))
-    return { text: "Satara, Maharashtra, India — open to remote and relocation across India and worldwide." };
+    return { text: "Pune, Maharashtra, India — open to remote and relocation across India and worldwide." };
 
   if (/thank|thanks|ty/.test(q)) return { text: "Anytime! 🚀 Best of luck — and feel free to reach out via the Contact section." };
 
