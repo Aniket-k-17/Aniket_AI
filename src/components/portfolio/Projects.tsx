@@ -18,6 +18,30 @@ const projects = [
     github: "https://github.com/Aniket-k-17/InsightGen-AI",
     demo: "https://insightgen-ai-by-aniket.streamlit.app/",
     badge: "Flagship",
+    renderVisual: () => (
+      <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[10px] select-none">
+        <div className="flex items-center justify-between border-b border-border/40 pb-2">
+          <span className="text-muted-foreground">dataset_explorer.py</span>
+          <span className="rounded bg-emerald-500/10 px-1.5 py-0.5 text-emerald-400 font-bold">READY</span>
+        </div>
+        <div className="mt-2 space-y-1.5 text-muted-foreground">
+          <div><span className="text-primary font-bold">&gt;&gt;&gt;</span> df.describe()</div>
+          <div className="grid grid-cols-4 gap-1 text-[8.5px] text-foreground/80">
+            <span>rows: 15.2k</span>
+            <span>columns: 12</span>
+            <span>nulls: 0%</span>
+            <span>acc: 94.6%</span>
+          </div>
+          <div className="flex items-end gap-1 pt-2 h-10">
+            <span className="h-5 w-full rounded bg-primary/20" />
+            <span className="h-7 w-full rounded bg-cyan/20" />
+            <span className="h-9 w-full rounded bg-violet/20" />
+            <span className="h-4 w-full rounded bg-primary/30" />
+            <span className="h-6 w-full rounded bg-cyan/30" />
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     icon: BarChart3,
@@ -33,21 +57,71 @@ const projects = [
     ],
     github: "https://github.com/Aniket-k-17/retail-marketing-analytics-dashboard",
     demo: "https://retail-marketing-analytics-dashboard-by-aniket.streamlit.app/",
+    renderVisual: () => (
+      <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[10px] select-none">
+        <div className="flex items-center justify-between border-b border-border/40 pb-2">
+          <span className="text-muted-foreground">kpi_metrics_dashboard</span>
+          <span className="rounded bg-amber-500/10 px-1.5 py-0.5 text-amber-400 font-bold">ACTIVE</span>
+        </div>
+        <div className="mt-2.5 grid grid-cols-3 gap-2">
+          <div className="rounded border border-border bg-card/40 p-2 text-center">
+            <span className="text-muted-foreground text-[7.5px] uppercase">Sales</span>
+            <div className="font-bold text-foreground text-[10.5px] mt-0.5">$1.2M</div>
+            <span className="text-emerald-400 text-[8px] font-semibold">+14.2%</span>
+          </div>
+          <div className="rounded border border-border bg-card/40 p-2 text-center">
+            <span className="text-muted-foreground text-[7.5px] uppercase">CAC</span>
+            <div className="font-bold text-foreground text-[10.5px] mt-0.5">$42.50</div>
+            <span className="text-rose-400 text-[8px] font-semibold">-8.3%</span>
+          </div>
+          <div className="rounded border border-border bg-card/40 p-2 text-center">
+            <span className="text-muted-foreground text-[7.5px] uppercase">ROI</span>
+            <div className="font-bold text-foreground text-[10.5px] mt-0.5">3.8x</div>
+            <span className="text-emerald-400 text-[8px] font-semibold">+18.5%</span>
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     icon: Film,
     title: "CineMatch – Movie Recommendation System",
     description:
-      "Machine learning-based movie recommendation system using content similarity techniques. Processes movie datasets to generate personalized recommendations through an interactive exploration interface.",
-    tech: ["Python", "Scikit-Learn", "Pandas"],
+      "Machine learning-based movie recommendation system built on a dataset of 5,000 movies. Computes cosine similarity to find matching recommendations, fetching movie posters dynamically via an IMDb API integration.",
+    tech: ["Python", "Scikit-Learn", "Pandas", "IMDb API"],
     features: [
-      "Personalized recommendations",
-      "Content similarity engine",
-      "Optimized recommendation accuracy",
-      "Interactive interface",
+      "Matches across 5,000+ movie entries",
+      "Cosine similarity matching engine",
+      "Dynamic poster fetching via IMDb API",
+      "Interactive search & recommendation flow",
     ],
     github: "https://github.com/Aniket-k-17/Cinematch",
     demo: "https://huggingface.co/spaces/aniket17k/Cinematch",
+    renderVisual: () => (
+      <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[10px] select-none">
+        <div className="flex items-center justify-between border-b border-border/40 pb-2">
+          <span className="text-muted-foreground">similarity_matching_engine (5,000 movies)</span>
+          <span className="rounded bg-blue-500/10 px-1.5 py-0.5 text-blue-400 font-bold">IMDb API</span>
+        </div>
+        <div className="mt-3 grid grid-cols-3 gap-2">
+          <div className="rounded border border-border bg-card/40 p-1.5 flex flex-col justify-between h-24">
+            <div className="h-10 w-full rounded bg-primary/20 flex items-center justify-center text-[7.5px] font-bold text-primary/70">POSTER</div>
+            <div className="text-[7.5px] truncate font-bold text-foreground/90 mt-1">Donnie Brasco</div>
+            <div className="text-[7px] text-emerald-400 font-bold mt-0.5">Sim: 0.435</div>
+          </div>
+          <div className="rounded border border-border bg-card/40 p-1.5 flex flex-col justify-between h-24">
+            <div className="h-10 w-full rounded bg-cyan/20 flex items-center justify-center text-[7.5px] font-bold text-cyan/70">POSTER</div>
+            <div className="text-[7.5px] truncate font-bold text-foreground/90 mt-1">Walking Tall</div>
+            <div className="text-[7px] text-emerald-400 font-bold mt-0.5">Sim: 0.393</div>
+          </div>
+          <div className="rounded border border-border bg-card/40 p-1.5 flex flex-col justify-between h-24">
+            <div className="h-10 w-full rounded bg-violet/20 flex items-center justify-center text-[7.5px] font-bold text-violet/70">POSTER</div>
+            <div className="text-[7.5px] truncate font-bold text-foreground/90 mt-1">Devils Wings</div>
+            <div className="text-[7px] text-emerald-400 font-bold mt-0.5">Sim: 0.313</div>
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     icon: Eye,
@@ -64,6 +138,21 @@ const projects = [
     github: null,
     demo: null,
     badge: "Computer Vision",
+    renderVisual: () => (
+      <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[10px] select-none">
+        <div className="flex items-center justify-between border-b border-border/40 pb-2">
+          <span className="text-muted-foreground">live_camera_feed_01</span>
+          <span className="rounded bg-rose-500/10 px-1.5 py-0.5 text-rose-400 font-bold animate-pulse">REC</span>
+        </div>
+        <div className="relative mt-2 h-14 rounded bg-black/60 border border-border/30 flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:10px_10px]" />
+          <div className="absolute left-1/4 top-1/6 w-28 h-8 border border-rose-500 bg-rose-500/10 rounded flex flex-col justify-center px-1">
+            <span className="text-[6.5px] text-rose-400 font-bold bg-black/50 px-1 py-0.2 rounded w-fit leading-none">person: 96.4%</span>
+          </div>
+          <div className="absolute right-4 bottom-1 text-[6.5px] text-muted-foreground/60">FPS: 30.2</div>
+        </div>
+      </div>
+    )
   },
 ];
 
@@ -90,7 +179,7 @@ export function Projects() {
               aria-hidden
             />
             <div className="relative">
-              <div className="flex items-start justify-between gap-3">
+              <div className="flex items-start justify-between gap-3 mb-4">
                 <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary via-cyan to-violet text-primary-foreground">
                   <p.icon className="h-5 w-5" />
                 </span>
@@ -100,6 +189,9 @@ export function Projects() {
                   </span>
                 )}
               </div>
+
+              {p.renderVisual()}
+
               <h3 className="mt-4 text-lg font-semibold leading-snug sm:text-xl">{p.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
 

@@ -6,14 +6,16 @@ export function Footer() {
     <footer className="relative border-t border-border bg-card/30 py-10">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <a href="#top" className="flex items-center gap-2 font-display font-bold">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-primary via-cyan to-violet text-primary-foreground">
-              <Sparkles className="h-4 w-4" />
+          <a href="#top" className="flex items-center gap-3 font-display font-bold tracking-tight">
+            <span className="grid h-8 w-8 place-items-center rounded-lg bg-foreground text-background text-sm font-black shadow">
+              AK
             </span>
-            Aniket<span className="text-gradient">.AI</span>
+            <span className="text-sm font-semibold tracking-tight text-foreground">
+              Aniket Kondhalkar
+            </span>
           </a>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-            Designing intelligent systems that transform data into actionable AI solutions.
+            AI & Machine Learning Engineer and Data Analyst building intelligent data-driven solutions.
           </p>
         </div>
         <div>
