@@ -47,7 +47,8 @@ export function Hero() {
               AI & Machine Learning Engineer
             </h2>
             <p className="text-sm font-semibold tracking-wide uppercase text-primary/80 sm:text-base">
-              Data Analytics Enthusiast <span className="mx-2 text-muted-foreground/30">|</span> Building Intelligent Data-Driven Solutions
+              Data Analytics Enthusiast <span className="mx-2 text-muted-foreground/30">|</span>{" "}
+              Building Intelligent Data-Driven Solutions
             </p>
           </div>
 
@@ -56,7 +57,9 @@ export function Hero() {
           </div>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Passionate about Machine Learning, Data Analytics, and Generative AI. I build intelligent systems that transform raw data into actionable insights and real-world solutions through practical AI applications.
+            Passionate about Machine Learning, Data Analytics, and Generative AI. I build
+            intelligent systems that transform raw data into actionable insights and real-world
+            solutions through practical AI applications.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
@@ -74,12 +77,22 @@ export function Hero() {
               <Mail className="h-4 w-4" /> Contact Me
             </a>
             <div className="flex items-center gap-2 pl-1">
-              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/aniket-kondhalkar-174a0a258/" target="_blank" rel="noopener noreferrer"
-                className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-card/40 backdrop-blur transition-colors hover:bg-muted">
+              <a
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/in/aniket-kondhalkar-174a0a258/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-card/40 backdrop-blur transition-colors hover:bg-muted"
+              >
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a aria-label="GitHub" href="https://github.com/Aniket-k-17" target="_blank" rel="noopener noreferrer"
-                className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-card/40 backdrop-blur transition-colors hover:bg-muted">
+              <a
+                aria-label="GitHub"
+                href="https://github.com/Aniket-k-17"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-10 w-10 place-items-center rounded-xl border border-border bg-card/40 backdrop-blur transition-colors hover:bg-muted"
+              >
                 <Github className="h-4 w-4" />
               </a>
             </div>
@@ -98,18 +111,21 @@ export function Hero() {
         >
           <div className="relative group">
             {/* Elegant soft shadow glow */}
-            <div className="absolute -inset-1.5 rounded-[1.8rem] bg-gradient-to-tr from-primary/20 to-cyan/10 opacity-70 blur-xl group-hover:opacity-100 transition-opacity duration-500" aria-hidden />
-            
+            <div
+              className="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-primary/20 to-cyan/10 opacity-70 blur-xl group-hover:opacity-100 transition-opacity duration-500"
+              aria-hidden
+            />
+
             {/* Clean, professional executive border container */}
-            <div className="relative rounded-[1.8rem] border border-border/80 bg-card p-2 shadow-2xl transition-all duration-300 group-hover:border-primary/30">
-              <div className="overflow-hidden rounded-[1.4rem] bg-muted/20">
+            <div className="relative rounded-full border border-border/80 bg-card p-2 shadow-2xl transition-all duration-300 group-hover:border-primary/30">
+              <div className="overflow-hidden rounded-full bg-muted/20">
                 <img
                   src={portraitImg}
                   alt="Aniket Shantaram Kondhalkar — AI / ML Engineer"
-                  width={720}
-                  height={960}
+                  width={280}
+                  height={280}
                   loading="eager"
-                  className="h-[340px] w-full max-w-[260px] rounded-[1.4rem] object-cover sm:h-[390px] sm:w-[290px] transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="h-[220px] w-[220px] sm:h-[280px] sm:w-[280px] rounded-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                 />
               </div>
             </div>
@@ -154,8 +170,6 @@ export function Hero() {
               <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-violet-500" />
               Gen AI
             </motion.div>
-
-
           </div>
         </motion.div>
       </div>
