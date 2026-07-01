@@ -139,7 +139,7 @@ const projects = [
   },
   {
     icon: Eye,
-    title: "YOLO Person Detection & Smart Recording System",
+    title: "Event Eye – YOLO Person Detection & Smart Recording System",
     description:
       "Real-time computer-vision system built with YOLOv8 and OpenCV. Detects people from live video streams, auto-saves snapshots on detection, records clips with pre- and post-event video buffering, and runs an automatic memory cleanup loop so the system can run continuously on edge hardware.",
     tech: ["YOLOv8", "OpenCV", "Python", "NumPy"],
@@ -149,7 +149,7 @@ const projects = [
       "Pre & post event video buffering",
       "Automatic memory / storage cleanup",
     ],
-    github: null,
+    github: "https://github.com/Aniket-k-17/Event_Eye",
     demo: null,
     badge: "Computer Vision",
     renderVisual: () => (

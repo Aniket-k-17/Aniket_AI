@@ -28,13 +28,13 @@ function answer(input: string): { text: string; suggestions?: string[] } {
 
   if (/(project|work|portfolio|build)/.test(q))
     return {
-      text: "He has shipped 4 ML/AI projects (InsightAI, CineMatch, YOLO Person Detection, Predictive Modeling), 4 BI dashboards, and 3 deployed live apps. Scroll to the Projects section to explore each one.",
-      suggestions: ["YOLO project", "InsightAI", "Dashboards"],
+      text: "He has shipped 4 ML/AI projects (InsightAI, CineMatch, Event Eye, Predictive Modeling), 4 BI dashboards, and 3 deployed live apps. Scroll to the Projects section to explore each one.",
+      suggestions: ["Event Eye", "InsightAI", "Dashboards"],
     };
 
-  if (/yolo|detection|computer vision|opencv/.test(q))
+  if (/yolo|detection|computer vision|opencv|event_?eye|event eye/.test(q))
     return {
-      text: "YOLO Person Detection System — real-time CV using YOLOv8 + OpenCV. Auto-saves images on detection, records clips with pre/post event buffers, and runs an automatic memory cleanup loop for 24/7 edge deployment.",
+      text: "Event Eye — YOLO Person Detection System: real-time computer vision using YOLOv8 + OpenCV. Auto-saves images on detection, records clips with pre/post event buffers, and runs an automatic memory cleanup loop for 24/7 edge deployment. Code: <a href=\"https://github.com/Aniket-k-17/Event_Eye\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline text-primary hover:text-violet transition-colors\">GitHub Repository</a>",
     };
 
   if (/insight|analytics|streamlit/.test(q))
