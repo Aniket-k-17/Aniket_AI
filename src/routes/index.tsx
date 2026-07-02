@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Designing intelligent systems that transform data into actionable insights and real-world AI solutions." },
       { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "https://aniket.ai/" }],
+    links: [{ rel: "canonical", href: "https://aniket-kondhalkar.vercel.app/" }],
   }),
   component: Index,
 });
