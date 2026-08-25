@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { Github, ExternalLink, Sparkles, BarChart3, Film, Eye } from "lucide-react";
+import { Github, ExternalLink, Sparkles, BarChart3, Film, Eye, BookOpen } from "lucide-react";
 
 const projects = [
   {
@@ -8,12 +8,12 @@ const projects = [
     title: "InsightGen AI – Automated Analytics & ML Platform",
     description:
       "End-to-end data platform that automates file cleaning, exploratory dashboard generation, anomaly detection, regression/classification training, and LLM-powered natural language queries.",
-    tech: ["Python", "Streamlit", "Scikit-Learn", "Plotly", "Groq (Llama 3)"],
+    tech: ["Python", "Streamlit", "Scikit-Learn", "Plotly", "Groq (gpt-oss-20b)"],
     features: [
       "Automated cleaning (CSV, Excel, JSON)",
       "Heatmaps, correlations & auto-charts",
       "Anomaly detection & ML training models",
-      "Groq Llama 3 natural language data chat",
+      "Groq gpt-oss-20b natural language data chat",
     ],
     github: "https://github.com/Aniket-k-17/InsightGen-AI",
     demo: "https://insightgen-ai-by-aniket.streamlit.app/",
@@ -22,7 +22,7 @@ const projects = [
       <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[9.5px] select-none">
         <div className="flex items-center justify-between border-b border-border/40 pb-2 mb-2.5">
           <span className="text-muted-foreground font-semibold">InsightGen AI Dashboard</span>
-          <span className="rounded bg-primary/10 px-1.5 py-0.5 text-primary font-bold">Llama 3 + Groq</span>
+          <span className="rounded bg-primary/10 px-1.5 py-0.5 text-primary font-bold">gpt-oss-20b + Groq</span>
         </div>
         <div className="grid grid-cols-2 gap-2">
           <div className="rounded border border-border/50 bg-card/30 p-2 flex flex-col justify-between">
@@ -38,7 +38,7 @@ const projects = [
             <span className="text-[8px] text-muted-foreground mt-0.5">Regression & classification</span>
           </div>
           <div className="rounded border border-border/50 bg-card/30 p-2 flex flex-col justify-between">
-            <span className="text-foreground/90 font-bold flex items-center gap-1">💬 Llama 3 AI Chat</span>
+            <span className="text-foreground/90 font-bold flex items-center gap-1">💬 gpt-oss-20b AI Chat</span>
             <span className="text-[8px] text-muted-foreground mt-0.5">Natural language data Q&A</span>
           </div>
         </div>
@@ -49,7 +49,7 @@ const projects = [
     icon: BarChart3,
     title: "Retail Marketing Analytics Dashboard",
     description:
-      "Business analytics dashboard to analyze retail sales, customer behavior, and campaign performance. Customer segmentation and KPI analysis with Python and Power BI, visualizing revenue trends and campaign ROI.",
+      "Enterprise-grade business analytics dashboard for retail sales, customer behavior, and campaign performance. Features advanced customer segmentation and comprehensive KPI analysis using Python and Power BI to visualize revenue trends and maximize campaign ROI.",
     tech: ["Python", "Power BI", "Streamlit", "Pandas"],
     features: [
       "Customer segmentation",
@@ -84,7 +84,7 @@ const projects = [
           </div>
         </div>
         <div className="rounded border border-border/45 bg-card/25 p-2 text-[8px] text-muted-foreground leading-relaxed">
-          <div className="font-semibold text-foreground/90 border-b border-border/30 pb-0.5 mb-1">Customer Segments</div>
+          <div className="font-semibold text-foreground/90 border-b border-border/30 pb-0.5 mb-1">KPI & Customer Segments</div>
           <div className="flex justify-between">
             <span>VIP (52k Customers)</span>
             <span className="text-emerald-400 font-bold">High Revenue Contribution</span>
@@ -168,6 +168,43 @@ const projects = [
       </div>
     )
   },
+  {
+    icon: BookOpen,
+    title: "RAG Document Q&A",
+    description:
+      "Retrieval-Augmented Generation application for querying documents. Implements vector embeddings and semantic search to provide accurate, context-aware answers from uploaded documents.",
+    tech: ["Python", "LangChain", "Vector Database", "Streamlit", "OpenAI"],
+    features: [
+      "Document processing & chunking",
+      "Vector embeddings generation",
+      "Semantic search & retrieval",
+      "Context-aware AI answers",
+    ],
+    github: "https://github.com/Aniket-k-17/rag-document-qa",
+    demo: null,
+    badge: "Gen AI",
+    renderVisual: () => (
+      <div className="mb-4 overflow-hidden rounded-xl border border-border/80 bg-muted/20 p-4 font-mono text-[10px] select-none">
+        <div className="flex items-center justify-between border-b border-border/40 pb-2">
+          <span className="text-muted-foreground">document_vector_store</span>
+          <span className="rounded bg-violet-500/10 px-1.5 py-0.5 text-violet-400 font-bold">RAG Active</span>
+        </div>
+        <div className="mt-3 flex flex-col gap-2">
+          <div className="rounded border border-border bg-card/40 p-2 flex items-center justify-between">
+            <div className="flex flex-col">
+              <span className="text-foreground/90 font-bold">Query: "What is the summary?"</span>
+              <span className="text-[8px] text-muted-foreground mt-0.5">Searching vector space...</span>
+            </div>
+            <span className="text-[9px] text-emerald-400 font-bold">0.92 Sim</span>
+          </div>
+          <div className="rounded border border-border bg-card/40 p-2 text-muted-foreground leading-relaxed text-[8.5px]">
+            <span className="text-violet-400 font-bold">AI: </span>
+            Based on the document context, the summary focuses on...
+          </div>
+        </div>
+      </div>
+    )
+  },
 ];
 
 export function Projects() {
@@ -186,7 +223,7 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.55, delay: (i % 2) * 0.1 }}
-            className="group relative flex flex-col overflow-hidden rounded-2xl glass card-glow p-6 shadow-card"
+            className="group relative flex flex-col overflow-hidden card-glow p-6"
           >
             <div
               className="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-gradient-to-br from-primary/20 via-cyan/10 to-transparent blur-2xl"

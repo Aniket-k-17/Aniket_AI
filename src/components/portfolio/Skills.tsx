@@ -1,46 +1,93 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Section } from "./Section";
-import { Code2, ChartBar, Brain, Layers, Sparkles, Cloud, Lightbulb } from "lucide-react";
+import { 
+  BarChart3, Brain, Network, BookOpen, LayoutDashboard,
+  LineChart, PieChart, FileSpreadsheet, MessageSquare
+} from "lucide-react";
+import { 
+  PythonOriginal, MysqlOriginal, PandasOriginal, NumpyOriginal, OpencvOriginal,
+  DockerOriginal, FastapiOriginal, GitOriginal, GithubOriginal, 
+  AmazonwebservicesOriginalWordmark, JupyterOriginal 
+} from "devicons-react";
 
-const groups = [
-  { icon: Code2, title: "Programming", items: ["Python", "SQL"] },
-  { icon: ChartBar, title: "Data Analytics", items: ["Power BI", "Pandas", "NumPy", "Data Cleaning", "EDA", "Feature Engineering", "Predictive Analytics"] },
-  { icon: Brain, title: "Machine Learning", items: ["Scikit-Learn", "Classification", "Regression", "Recommendation Systems", "Model Evaluation"] },
-  { icon: Layers, title: "Deep Learning", items: ["Neural Networks", "Computer Vision", "OpenCV"] },
-  { icon: Sparkles, title: "Generative AI", items: ["LLM Fundamentals", "Generative AI Applications", "AI Analytics Workflows"] },
-  { icon: Cloud, title: "Cloud & Dev Tools", items: ["AWS EC2", "AWS S3", "AWS IAM", "AWS CLI", "Docker", "FastAPI", "Git", "GitHub", "Jupyter Notebook", "Streamlit"] },
-  { icon: Lightbulb, title: "Concepts", items: ["Machine Learning", "Deep Learning", "Generative AI", "MLOps", "Business Intelligence"] },
+// The categories: "All", "Languages", "Frameworks", "Data & AI", "Cloud & Tools"
+const filters = ["All", "Languages", "Frameworks", "Data & AI", "Cloud & Tools"];
+
+const skillsData = [
+  { name: "Python", category: "Languages", icon: PythonOriginal },
+  { name: "SQL", category: "Languages", icon: MysqlOriginal },
+  
+  { name: "FastAPI", category: "Frameworks", icon: FastapiOriginal },
+  { name: "Streamlit", category: "Frameworks", icon: LayoutDashboard, color: "#ff4b4b" },
+  { name: "LangChain", category: "Frameworks", icon: Network, color: "#14a37f" },
+  
+  { name: "Pandas", category: "Data & AI", icon: PandasOriginal },
+  { name: "NumPy", category: "Data & AI", icon: NumpyOriginal },
+  { name: "Matplotlib", category: "Data & AI", icon: LineChart, color: "#11557c" },
+  { name: "Seaborn", category: "Data & AI", icon: PieChart, color: "#4c72b0" },
+  { name: "Scikit-Learn", category: "Data & AI", icon: Brain, color: "#f9a03f" },
+  { name: "OpenCV", category: "Data & AI", icon: OpencvOriginal },
+  { name: "NLP", category: "Data & AI", icon: MessageSquare, color: "#9b59b6" },
+  { name: "RAG", category: "Data & AI", icon: BookOpen, color: "#ff007f" },
+  
+  { name: "MS Excel", category: "Data & AI", icon: FileSpreadsheet, color: "#217346" },
+  
+  { name: "Docker", category: "Cloud & Tools", icon: DockerOriginal },
+  { name: "Git", category: "Cloud & Tools", icon: GitOriginal },
+  { name: "GitHub", category: "Cloud & Tools", icon: GithubOriginal },
+  { name: "Jupyter", category: "Cloud & Tools", icon: JupyterOriginal },
+  { name: "AWS", category: "Cloud & Tools", icon: AmazonwebservicesOriginalWordmark },
+  { name: "Power BI", category: "Cloud & Tools", icon: BarChart3, color: "#f2c811" },
 ];
 
 export function Skills() {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredSkills = skillsData.filter(
+    (skill) => activeFilter === "All" || skill.category === activeFilter
+  );
+
   return (
-    <Section id="skills" eyebrow="Skills" title="Tech stack & expertise" subtitle="A toolbox built around shipping real AI and analytics products.">
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {groups.map((g, i) => (
-          <motion.div
-            key={g.title}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
-            className="group glass card-glow rounded-2xl p-6 shadow-card"
+    <Section id="skills" eyebrow="MY ARSENAL" title="Tools of the Trade" subtitle="">
+      <div className="flex flex-wrap items-center gap-3 mb-10">
+        {filters.map((f) => (
+          <button
+            key={f}
+            onClick={() => setActiveFilter(f)}
+            className={`rounded-full px-5 py-2 text-[11px] font-mono tracking-wide transition-all ${
+              activeFilter === f 
+                ? "bg-primary/10 text-primary border border-primary/50 shadow-[0_0_15px_-3px_rgba(0,240,255,0.2)]"
+                : "bg-card border border-border/50 text-muted-foreground hover:text-foreground hover:border-border"
+            }`}
           >
-            <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary/20 via-cyan/20 to-violet/20 text-primary">
-                <g.icon className="h-5 w-5" />
-              </span>
-              <h3 className="text-lg font-semibold">{g.title}</h3>
-            </div>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {g.items.map((s) => (
-                <span key={s} className="rounded-lg border border-border bg-muted/40 px-2.5 py-1 text-xs font-medium text-foreground/80 transition-colors hover:border-primary/40 hover:text-foreground">
-                  {s}
-                </span>
-              ))}
-            </div>
-          </motion.div>
+            {f}
+          </button>
         ))}
       </div>
+
+      <motion.div layout className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+        <AnimatePresence mode="popLayout">
+          {filteredSkills.map((skill) => (
+            <motion.div
+              layout
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.2 }}
+              key={skill.name}
+              className="flex flex-col items-center justify-center gap-4 p-5 rounded-3xl bg-card border border-border/40 hover:border-primary/50 hover:shadow-[0_0_20px_-5px_rgba(0,240,255,0.3)] transition-all group aspect-square"
+            >
+              <div className="h-10 w-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                <skill.icon size={40} className="w-10 h-10 drop-shadow-md" style={skill.color ? { color: skill.color } : {}} />
+              </div>
+              <span className="text-[10px] font-mono text-muted-foreground group-hover:text-foreground text-center leading-tight">
+                {skill.name}
+              </span>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </Section>
   );
 }

@@ -5,13 +5,13 @@ import { Briefcase } from "lucide-react";
 export function Experience() {
   return (
     <Section id="experience" eyebrow="Experience" title="Where I'm building">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl space-y-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative glass rounded-2xl p-6 shadow-card sm:p-8"
+          className="relative card-glow p-6 sm:p-8"
         >
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="flex items-start gap-4">
@@ -24,7 +24,7 @@ export function Experience() {
               </div>
             </div>
             <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-              Feb 2026 – Present
+              Feb 2026 – Aug 2026
             </span>
           </div>
 

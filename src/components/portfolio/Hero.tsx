@@ -66,7 +66,7 @@ export function Hero() {
             <a
               href="/Aniket_Kondhalkar_Resume.pdf"
               download="Aniket_Kondhalkar_Resume.pdf"
-              className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary via-primary to-violet px-5 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
+              className="group inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.02] hover:shadow-[0_0_20px_-5px_rgba(0,240,255,0.4)]"
             >
               <Download className="h-4 w-4" /> Download Resume
             </a>
@@ -135,7 +135,7 @@ export function Hero() {
               custom={{ yStart: 0, yEnd: -12, duration: 5 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="flex items-center gap-1.5 absolute -left-4 sm:-left-12 top-1/4 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-md border border-border/60 backdrop-blur"
+              className="flex items-center gap-1.5 absolute -left-4 sm:-left-12 top-1/4 bg-card rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-sm border border-border transition-all hover:border-foreground"
             >
               <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-blue-500" />
               Python
@@ -145,7 +145,7 @@ export function Hero() {
               custom={{ yStart: 6, yEnd: -8, duration: 5.5 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="flex items-center gap-1.5 absolute -left-6 sm:-left-16 bottom-1/4 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-md border border-border/60 backdrop-blur"
+              className="flex items-center gap-1.5 absolute -left-6 sm:-left-16 bottom-1/4 bg-card rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-sm border border-border transition-all hover:border-foreground"
             >
               <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-amber-500" />
               Power BI
@@ -155,7 +155,7 @@ export function Hero() {
               custom={{ yStart: -6, yEnd: 8, duration: 6 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="flex items-center gap-1.5 absolute -right-6 sm:-right-16 top-20 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-md border border-border/60 backdrop-blur"
+              className="flex items-center gap-1.5 absolute -right-6 sm:-right-16 top-20 bg-card rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-sm border border-border transition-all hover:border-foreground"
             >
               <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-500" />
               Machine Learning
@@ -165,7 +165,7 @@ export function Hero() {
               custom={{ yStart: -4, yEnd: 8, duration: 4.8 }}
               variants={floatingBadgeVariants}
               animate="animate"
-              className="flex items-center gap-1.5 absolute -right-4 sm:-right-12 bottom-1/4 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-md border border-border/60 backdrop-blur"
+              className="flex items-center gap-1.5 absolute -right-4 sm:-right-12 bottom-1/4 bg-card rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold shadow-sm border border-border transition-all hover:border-foreground"
             >
               <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-violet-500" />
               Gen AI
