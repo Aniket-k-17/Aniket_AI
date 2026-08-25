@@ -12,8 +12,9 @@
   --radius-2xl: 24px;
   --radius-3xl: 32px;
 
-  --font-display: "JetBrains Mono", ui-monospace, monospace;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* Editorial serif for display, elegant sans for body */
+  --font-display: "Playfair Display", "Georgia", ui-serif, serif;
+  --font-sans: "Inter", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --color-background: var(--background);
@@ -35,61 +36,55 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-cyan: var(--cyan);
-  --color-violet: var(--violet);
 
-  --shadow-glow: 0 0 30px -5px color-mix(in oklab, var(--primary) 60%, transparent);
-  --shadow-card: 0 10px 40px -10px color-mix(in oklab, #000 50%, transparent);
+  --shadow-glow: 0 0 30px -5px color-mix(in oklab, var(--primary) 30%, transparent);
+  --shadow-card: 0 10px 40px -10px color-mix(in oklab, #000 70%, transparent);
 }
 
 :root {
-  /* Light mode - sleek white with cyan/blue accents */
-  --background: oklch(0.98 0.01 220);
-  --foreground: oklch(0.1 0.05 240);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.1 0.05 240);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.1 0.05 240);
-  --primary: oklch(0.6 0.15 240); /* Cyan */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.02 240);
-  --secondary-foreground: oklch(0.2 0.05 240);
-  --muted: oklch(0.95 0.02 240);
-  --muted-foreground: oklch(0.5 0.05 240);
-  --accent: oklch(0.95 0.05 240);
-  --accent-foreground: oklch(0.6 0.15 240);
-  --destructive: oklch(0.6 0.2 20);
+  /* Light mode - warm beige/cream with deep red accents */
+  --background: oklch(0.96 0.02 75); /* Warm cream */
+  --foreground: oklch(0.2 0.02 40); /* Deep espresso text */
+  --card: oklch(0.98 0.01 75);
+  --card-foreground: oklch(0.2 0.02 40);
+  --popover: oklch(0.98 0.01 75);
+  --popover-foreground: oklch(0.2 0.02 40);
+  --primary: oklch(0.45 0.15 25); /* Deep Crimson Red */
+  --primary-foreground: oklch(0.98 0.01 75);
+  --secondary: oklch(0.9 0.03 75);
+  --secondary-foreground: oklch(0.3 0.05 40);
+  --muted: oklch(0.9 0.02 75);
+  --muted-foreground: oklch(0.4 0.03 40);
+  --accent: oklch(0.9 0.03 75);
+  --accent-foreground: oklch(0.45 0.15 25);
+  --destructive: oklch(0.5 0.2 20);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.9 0.02 240);
-  --input: oklch(0.9 0.02 240);
-  --ring: oklch(0.6 0.15 240);
-  --cyan: oklch(0.6 0.15 200);
-  --violet: oklch(0.5 0.15 280);
+  --border: oklch(0.85 0.02 75);
+  --input: oklch(0.85 0.02 75);
+  --ring: oklch(0.45 0.15 25);
 }
 
 .dark {
-  /* Dark mode - Deep navy with cyan and blue glows */
-  --background: oklch(0.08 0.02 240); /* Deep dark navy */
-  --foreground: oklch(0.98 0.01 240); /* Off white */
-  --card: oklch(0.12 0.02 240); 
-  --card-foreground: oklch(0.98 0.01 240);
-  --popover: oklch(0.12 0.02 240);
-  --popover-foreground: oklch(0.98 0.01 240);
-  --primary: oklch(0.7 0.15 240); /* Neon Cyan */
-  --primary-foreground: oklch(0.08 0.02 240); 
-  --secondary: oklch(0.18 0.03 240);
-  --secondary-foreground: oklch(0.98 0.01 240);
-  --muted: oklch(0.15 0.02 240);
-  --muted-foreground: oklch(0.65 0.02 240); /* Steel blue gray */
-  --accent: oklch(0.2 0.05 240);
-  --accent-foreground: oklch(0.7 0.15 240); 
-  --destructive: oklch(0.6 0.2 20);
+  /* Dark mode - Dark Editorial / Deep Warm Black with Crimson and Beige */
+  --background: oklch(0.12 0.01 40); /* Very dark warm charcoal/brown */
+  --foreground: oklch(0.85 0.03 75); /* Elegant warm beige/tan */
+  --card: oklch(0.16 0.01 40); /* Slightly lighter warm dark for cards */
+  --card-foreground: oklch(0.85 0.03 75);
+  --popover: oklch(0.16 0.01 40);
+  --popover-foreground: oklch(0.85 0.03 75);
+  --primary: oklch(0.45 0.15 20); /* Deep elegant Crimson/Burgundy */
+  --primary-foreground: oklch(0.95 0.02 75); 
+  --secondary: oklch(0.2 0.02 40);
+  --secondary-foreground: oklch(0.85 0.03 75);
+  --muted: oklch(0.18 0.01 40);
+  --muted-foreground: oklch(0.65 0.03 75); /* Muted beige */
+  --accent: oklch(0.22 0.02 40);
+  --accent-foreground: oklch(0.45 0.15 20); 
+  --destructive: oklch(0.5 0.2 20);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.2 0.04 240); /* Blue tinted borders */
-  --input: oklch(0.2 0.04 240);
-  --ring: oklch(0.7 0.15 240);
-  --cyan: oklch(0.7 0.15 200);
-  --violet: oklch(0.6 0.15 280); /* Deep Purple */
+  --border: oklch(0.22 0.01 40); /* Subtle warm borders */
+  --input: oklch(0.22 0.01 40);
+  --ring: oklch(0.45 0.15 20);
 }
 
 @layer base {
@@ -100,15 +95,17 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.01em;
   }
   h1, h2, h3, h4 { 
     font-family: var(--font-display); 
-    font-weight: 700;
+    font-weight: 500; /* Serif looks better slightly lighter */
+    letter-spacing: -0.01em;
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
     background: var(--color-background);
@@ -123,43 +120,40 @@
 }
 
 @utility glass {
-  background: color-mix(in oklab, var(--color-card) 60%, transparent);
+  background: color-mix(in oklab, var(--color-card) 70%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--color-border);
-  box-shadow: inset 0 0 20px color-mix(in oklab, var(--color-primary) 5%, transparent);
 }
 
 @utility text-gradient {
-  background: linear-gradient(135deg, var(--color-primary) 20%, var(--color-violet));
+  background: linear-gradient(135deg, var(--color-foreground) 30%, var(--color-primary));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 @utility bg-radial-glow {
-  background: radial-gradient(100% 100% at 50% 0%, color-mix(in oklab, var(--color-primary) 15%, transparent) 0%, transparent 50%);
+  background: radial-gradient(100% 100% at 50% 0%, color-mix(in oklab, var(--color-primary) 8%, transparent) 0%, transparent 60%);
 }
 
 @utility grid-bg {
-  background-image:
-    linear-gradient(to right, color-mix(in oklab, var(--color-primary) 15%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--color-primary) 15%, transparent) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(ellipse at center, black 10%, transparent 80%);
+  /* Very faint subtle grain/texture look instead of neon grids for editorial */
+  background-image: radial-gradient(color-mix(in oklab, var(--color-foreground) 4%, transparent) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 @utility card-glow {
   position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   border: 1px solid var(--color-border);
   background-color: var(--color-card);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 25px -5px color-mix(in oklab, var(--color-primary) 50%, transparent);
-    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px -10px color-mix(in oklab, #000 60%, transparent);
+    border-color: color-mix(in oklab, var(--color-primary) 40%, transparent);
   }
 }
 
