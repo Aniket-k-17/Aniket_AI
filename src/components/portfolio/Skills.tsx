@@ -18,25 +18,25 @@ const skillsData = [
   { name: "SQL", category: "Languages", icon: MysqlOriginal },
   
   { name: "FastAPI", category: "Frameworks", icon: FastapiOriginal },
-  { name: "Streamlit", category: "Frameworks", icon: LayoutDashboard },
-  { name: "LangChain", category: "Frameworks", icon: Network },
+  { name: "Streamlit", category: "Frameworks", icon: LayoutDashboard, color: "#ff4b4b" },
+  { name: "LangChain", category: "Frameworks", icon: Network, color: "#14a37f" },
   
   { name: "Pandas", category: "Data & AI", icon: PandasOriginal },
   { name: "NumPy", category: "Data & AI", icon: NumpyOriginal },
-  { name: "Matplotlib", category: "Data & AI", icon: LineChart },
-  { name: "Seaborn", category: "Data & AI", icon: PieChart },
-  { name: "Scikit-Learn", category: "Data & AI", icon: Brain },
+  { name: "Matplotlib", category: "Data & AI", icon: LineChart, color: "#11557c" },
+  { name: "Seaborn", category: "Data & AI", icon: PieChart, color: "#4c72b0" },
+  { name: "Scikit-Learn", category: "Data & AI", icon: Brain, color: "#f9a03f" },
   { name: "OpenCV", category: "Data & AI", icon: OpencvOriginal },
-  { name: "NLP", category: "Data & AI", icon: MessageSquare },
-  { name: "RAG", category: "Data & AI", icon: BookOpen },
-  { name: "MS Excel", category: "Data & AI", icon: FileSpreadsheet },
+  { name: "NLP", category: "Data & AI", icon: MessageSquare, color: "#9b59b6" },
+  { name: "RAG", category: "Data & AI", icon: BookOpen, color: "#ff007f" },
+  { name: "MS Excel", category: "Data & AI", icon: FileSpreadsheet, color: "#217346" },
   
   { name: "Docker", category: "Cloud & Tools", icon: DockerOriginal },
   { name: "Git", category: "Cloud & Tools", icon: GitOriginal },
   { name: "GitHub", category: "Cloud & Tools", icon: GithubOriginal },
   { name: "Jupyter", category: "Cloud & Tools", icon: JupyterOriginal },
   { name: "AWS", category: "Cloud & Tools", icon: AmazonwebservicesOriginalWordmark },
-  { name: "Power BI", category: "Cloud & Tools", icon: BarChart3 },
+  { name: "Power BI", category: "Cloud & Tools", icon: BarChart3, color: "#f2c811" },
 ];
 
 export function Skills() {
@@ -64,7 +64,7 @@ export function Skills() {
         ))}
       </div>
 
-      <motion.div layout className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-border/40 border border-border/40 rounded-xl overflow-hidden">
+      <motion.div layout className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
         <AnimatePresence mode="popLayout">
           {filteredSkills.map((skill) => (
             <motion.div
@@ -74,12 +74,12 @@ export function Skills() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               key={skill.name}
-              className="flex flex-col items-center justify-center gap-4 p-8 bg-card hover:bg-card/80 transition-all group aspect-square"
+              className="flex flex-col items-center justify-center gap-4 p-5 rounded-3xl bg-card border border-border/40 hover:border-primary/50 hover:shadow-[0_0_20px_-5px_rgba(139,34,34,0.3)] transition-all group aspect-square"
             >
-              <div className="h-10 w-10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
-                <skill.icon size={40} className="w-10 h-10 text-primary drop-shadow-sm" />
+              <div className="h-10 w-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                <skill.icon size={40} className="w-10 h-10 drop-shadow-sm" style={skill.color ? { color: skill.color } : {}} />
               </div>
-              <span className="text-xs font-sans tracking-wide text-muted-foreground group-hover:text-foreground text-center">
+              <span className="text-[11px] font-sans tracking-wide text-muted-foreground group-hover:text-foreground text-center">
                 {skill.name}
               </span>
             </motion.div>
